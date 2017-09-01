@@ -34,6 +34,7 @@ buildscript {
         maven {
             url 'https://jitpack.io'
         }
+        maven { url 'https://repository.apache.org/snapshots/' }
     }
 
     dependencies {
@@ -94,6 +95,7 @@ allprojects {
         }
         jcenter()
         maven { url 'http://dl.bintray.com/melix/thirdparty-apache' } // openbeans
+        maven { url 'https://repository.apache.org/snapshots/' }
     }
 
     apply plugin: 'groovy'
@@ -145,6 +147,7 @@ repositories {
     // todo Some repos are needed only for some configs. Declare them just for the configuration once Gradle allows this.
     maven { url 'http://repository.jboss.org/nexus/content/groups/m2-release-proxy' } // examples, tools
     maven { url 'http://repo.bodar.com' } // tools - jarjar
+    maven { url 'https://repository.apache.org/snapshots/' }
 }
 
 // todo do we need compile and runtime scope for examples?
@@ -168,7 +171,7 @@ ext {
     eclipseOsgiVersion = '3.9.1-v20140110-1610'
     gparsVersion = '1.2.1'
     gradleVersion = '3.5.1'
-    ivyVersion = '2.4.0'
+    ivyVersion = '2.5.0-SNAPSHOT'
     jansiVersion = '1.13'
     jarjarVersion = '1.4.1'
     jlineVersion = '2.14.5'
